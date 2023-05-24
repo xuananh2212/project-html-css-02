@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* ================common=================== */
+
+.content {
+    width: 1170px;
+    margin: auto;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: flex;
+    width: 118px;
+    height: 50px;
+    background: #171100;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.9;
+    color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* ====================Header================== */
+
+.fixed-header {
+    position: sticky;
+    left: 0;
+    top: calc(12px - 36px);
+    z-index: 1;
+    background: #FFFCF4;
+    padding-top: calc(36px - 12px);
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+
+}
+
+.nav-menu {
+    display: flex;
+    margin-left: 512px;
+    gap: 42px;
+
+}
+
+.nav-menu a {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #5F5B53;
+
+}
+
+.nav-menu li:first-child a {
+    position: relative;
+    font-weight: 600;
+    text-align: center;
+    color: #171100;
+}
+
+.nav-menu li:first-child a::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 12px;
+    height: 2px;
+    background: #171100;
+    border-radius: 1px;
+}
+
+.nav-bar .btn {
+    margin-left: 70px;
+    min-width: 144px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
