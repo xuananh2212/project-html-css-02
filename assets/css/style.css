@@ -113,7 +113,7 @@ a {
 
 .hezo .image-block,
 .hezo .infor {
-    flex: 1;
+    width: 50%;
 }
 
 .hezo .image-block>img {
@@ -161,10 +161,12 @@ a {
 }
 
 .hezo .infor {
-    padding: 63px 0 64px 130px;
+    padding: 63px 0 64px 115px;
+
 }
 
 .hezo .infor h1 {
+    font-family: 'Sen', sans-serif;
     font-weight: 700;
     font-size: 5.8rem;
     line-height: 1.17;
@@ -188,9 +190,9 @@ a {
 
 .hezo .infor .row .btn {
     min-width: 180px;
+    font-size: 1.4rem;
     background: #FFB900;
     border-radius: 32px;
-
 }
 
 .hezo .infor .row .row-item {
@@ -237,6 +239,7 @@ a {
 }
 
 .hezo .infor .row-infor strong {
+    font-family: 'Sen', sans-serif;
     margin-left: 2px;
     font-weight: 700;
     font-size: 4.4rem;
@@ -251,4 +254,103 @@ a {
     font-size: 1.8rem;
     line-height: 1.67;
     color: #5F5B53;
+}
+
+
+/* =================course=================== */
+
+.courses {
+    padding: 200px 0;
+}
+
+.courses .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.courses .row .sub-title {
+    font-family: 'Sen', sans-serif;
+    font-weight: 700;
+    font-size: 3.8rem;
+    line-height: 1.26;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.courses .row .desc {
+    width: 458px;
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5F5B53;
+}
+
+.courses .row-item img:first-child {
+    margin-right: 18px;
+}
+
+.courses .list-courses {
+    margin-top: 55px;
+    display: flex;
+    gap: 30px;
+}
+
+.courses .list-courses .items>img {
+    width: 370px;
+    height: 278px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+
+}
+
+.courses .list-courses .infor {
+    padding: 16px 22px 22px 22px;
+}
+
+.courses .list-courses .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.courses .list-courses .infor .sub-title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+
+}
+
+.courses .list-courses .infor .desc {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5F5B53;
+}
+
+.courses .list-courses .infor .row-1 {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.courses .list-courses .infor strong {
+    margin-right: 141px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.courses .list-courses .items:first-of-type .row-1 .btn {
+    background: #FFB900;
+}
+
+.courses .list-courses .items {
+    background: #FFFFFF;
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
 }
