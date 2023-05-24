@@ -45,6 +45,7 @@ a {
     z-index: 1;
     background: #FFFCF4;
     padding-top: calc(36px - 12px);
+}
 
 .nav-bar {
     display: flex;
@@ -92,4 +93,162 @@ a {
     min-width: 144px;
     font-size: 1.6rem;
     line-height: 1.75;
+}
+
+/* ======================hero=============== */
+
+.hezo-wrap {
+    background: #FFFCF4;
+    padding-top: calc(75px - 12px);
+    padding-bottom: 65px;
+}
+
+.hezo {
+    display: flex;
+}
+
+.hezo .image-block {
+    position: relative;
+}
+
+.hezo .image-block,
+.hezo .infor {
+    flex: 1;
+}
+
+.hezo .image-block>img {
+    width: 470px;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.hezo .image-block .row {
+    width: 270px;
+    height: 244px;
+    position: absolute;
+    right: 0;
+    bottom: 48px;
+    background: #FFFFFF;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 24px 58px 24px 24px;
+
+}
+
+.hezo .image-block .row-list .row-items {
+    display: flex;
+    gap: 16px;
+    margin-top: 14px;
+}
+
+.hezo .image-block .row-list {
+    margin-top: -12px;
+}
+
+.hezo .image-block .row-list .row-items .desc {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5F5B53;
+}
+
+.hezo .image-block .row-list .row-items h2 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    color: #171100;
+}
+
+.hezo .infor {
+    padding: 63px 0 64px 130px;
+}
+
+.hezo .infor h1 {
+    font-weight: 700;
+    font-size: 5.8rem;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.hezo .infor .desc-1 {
+    margin-top: 22px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5F5B53;
+}
+
+.hezo .infor .row {
+    margin-top: 38px;
+    display: flex;
+    gap: 28px;
+}
+
+.hezo .infor .row .btn {
+    min-width: 180px;
+    background: #FFB900;
+    border-radius: 32px;
+
+}
+
+.hezo .infor .row .row-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.hezo .infor .row .row-item a {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+
+}
+
+.hezo .infor .row .row-item .sub-row {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+    border-radius: 50%;
+
+}
+
+.hezo .infor .row .row-item .sub-row img {
+    margin: auto;
+}
+
+.hezo .infor .desc-2 {
+    margin-top: 48px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5F5B53;
+
+}
+
+.hezo .infor .row-infor {
+    margin-top: 8px;
+    display: flex;
+    gap: 28px;
+}
+
+.hezo .infor .row-infor strong {
+    margin-left: 2px;
+    font-weight: 700;
+    font-size: 4.4rem;
+    line-height: 1.23;
+    color: #171100;
+
+
+}
+
+.hezo .infor .row-infor span {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5F5B53;
 }
