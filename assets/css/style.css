@@ -1,23 +1,32 @@
 * {
     box-sizing: border-box;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
-
-
 }
 
 html {
     font-size: 62.5%;
 }
 
-html, body {
+html,
+body {
     scroll-behavior: smooth;
+}
+
+:root {
+    --font-sen: 'Sen', sans-serif;
 }
 
 /* ================common=================== */
 
 .content {
     width: 1170px;
-    margin: auto;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+
 
 }
 
@@ -31,7 +40,7 @@ a {
     width: 118px;
     height: 50px;
     background: #171100;
-    border-radius: 25px;
+    border-radius: 999px;
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 1.9;
@@ -43,13 +52,16 @@ a {
 
 /* ====================Header================== */
 
-.fixed-header {
-    position: sticky;
-    left: 0;
-    top: calc(12px - 36px);
-    z-index: 1;
+header {
     background: #FFFCF4;
     padding-top: calc(36px - 12px);
+}
+
+.header.fixed {
+    position: sticky;
+    left: 0;
+    top: -24px;
+    z-index: 1;
 }
 
 .nav-bar {
@@ -61,12 +73,12 @@ a {
 
 .nav-menu {
     display: flex;
-    margin-left: 512px;
-    gap: 42px;
+    margin-left: auto;
 
 }
 
 .nav-menu a {
+    padding: 8px 21px;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.75;
@@ -74,18 +86,23 @@ a {
 
 }
 
-.nav-menu li:first-child a {
+.nav-menu li.action a {
     position: relative;
     font-weight: 600;
-    text-align: center;
     color: #171100;
 }
 
-.nav-menu li:first-child a::before {
+.nav-menu a:hover,
+.nav-menu li.action a {
+    text-shadow: 1px 0 0 currentColor;
+    color: #171100;
+}
+
+.nav-menu .action a::before {
     display: inline-block;
     content: "";
     position: absolute;
-    left: 0;
+    left: 21px;
     bottom: -1px;
     width: 12px;
     height: 2px;
@@ -93,8 +110,8 @@ a {
     border-radius: 1px;
 }
 
-.nav-bar .btn {
-    margin-left: 70px;
+.nav-bar .action-btn {
+    margin-left: 49px;
     min-width: 144px;
     font-size: 1.6rem;
     line-height: 1.75;
@@ -102,75 +119,155 @@ a {
 
 /* ======================hero=============== */
 
-.hezo-wrap {
+.hezo {
     background: #FFFCF4;
-    padding-top: calc(75px - 12px);
+    padding-top: 63px;
     padding-bottom: 65px;
 }
 
-.hezo {
+.body {
     display: flex;
 }
 
-.hezo .image-block {
+.body .media-block {
     position: relative;
+    width: 48%;
 }
 
-.hezo .image-block,
-.hezo .infor {
-    width: 50%;
-}
-
-.hezo .image-block>img {
+.body .media-block .img {
     width: 470px;
     height: 685px;
     object-fit: cover;
     border-radius: 20px;
 }
 
-.hezo .image-block .row {
+.body .media-block .hezo-summary {
     width: 270px;
-    height: 244px;
     position: absolute;
     right: 0;
     bottom: 48px;
     background: #FFFFFF;
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
     border-radius: 12px;
-    padding: 24px 58px 24px 24px;
+    padding: 24px 24px;
 
 }
 
-.hezo .image-block .row-list .row-items {
+.body .media-block .hezo-summary .items {
     display: flex;
     gap: 16px;
-    margin-top: 14px;
+    align-items: center;
 }
 
-.hezo .image-block .row-list {
-    margin-top: -12px;
+.body .media-block .hezo-summary .icon {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    background: #FFF9E8;
+    border-radius: 50%;
+
 }
 
-.hezo .image-block .row-list .row-items .desc {
+.body .media-block .infor .label {
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.86;
     color: #5F5B53;
 }
 
-.hezo .image-block .row-list .row-items h2 {
+.body .media-block .infor .title {
     font-weight: 600;
     font-size: 18px;
     line-height: 30px;
     color: #171100;
 }
 
-.hezo .infor {
-    padding: 63px 0 64px 115px;
+.body .media-block .items+.items {
+    margin-top: 22px;
+}
+
+
+.body .content-block {
+    width: 52%;
+    padding: calc(214px - 150px) 0 0 130px;
+}
+
+.body .content-block .title {
+    font-family: var(--font-sen);
+    font-weight: 700;
+    font-size: 5.8rem;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.body .content-block .desc {
+    margin-top: 22px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5F5B53;
 
 }
 
-.hezo .infor h1 {
+.body .content-block .cta-group {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin: 28px 0 48px 0;
+}
+
+.body .content-block .btn-cta {
+    min-width: 180px;
+    height: 64px;
+    background: #FFB900;
+}
+
+.body .content-block .watch-video {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
+
+.body .content-block .watch-video .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+    border-radius: 50%;
+}
+
+.body .content-block .stats {
+    margin-top: 8px;
+    margin-left: -28px;
+}
+
+.body .content-block .stats strong {
+    margin: 0 16px 0 28px;
+    font-weight: 700;
+    font-size: 4.4rem;
+    line-height: 1.23;
+    color: #171100;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .body .infor h1 {
     font-family: 'Sen', sans-serif;
     font-weight: 700;
     font-size: 5.8rem;
@@ -179,7 +276,7 @@ a {
     color: #171100;
 }
 
-.hezo .infor .desc-1 {
+.body .infor .desc-1 {
     margin-top: 22px;
     font-weight: 400;
     font-size: 1.8rem;
@@ -187,26 +284,26 @@ a {
     color: #5F5B53;
 }
 
-.hezo .infor .row {
+.body .infor .row {
     margin-top: 38px;
     display: flex;
     gap: 28px;
 }
 
-.hezo .infor .row .btn {
+.body .infor .row .btn {
     min-width: 180px;
     font-size: 1.4rem;
     background: #FFB900;
     border-radius: 32px;
 }
 
-.hezo .infor .row .row-item {
+.body .infor .row .row-item {
     display: flex;
     align-items: center;
     gap: 14px;
 }
 
-.hezo .infor .row .row-item a {
+.body .infor .row .row-item a {
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 1.67;
@@ -214,7 +311,7 @@ a {
 
 }
 
-.hezo .infor .row .row-item .sub-row {
+.body .infor .row .row-item .sub-row {
     display: flex;
     width: 40px;
     height: 40px;
@@ -224,11 +321,11 @@ a {
 
 }
 
-.hezo .infor .row .row-item .sub-row img {
+.body .infor .row .row-item .sub-row img {
     margin: auto;
 }
 
-.hezo .infor .desc-2 {
+.body .infor .desc-2 {
     margin-top: 48px;
     font-weight: 400;
     font-size: 1.8rem;
@@ -237,13 +334,13 @@ a {
 
 }
 
-.hezo .infor .row-infor {
+.body .infor .row-infor {
     margin-top: 8px;
     display: flex;
     gap: 28px;
 }
 
-.hezo .infor .row-infor strong {
+.body .infor .row-infor strong {
     font-family: 'Sen', sans-serif;
     margin-left: 2px;
     font-weight: 700;
@@ -254,12 +351,12 @@ a {
 
 }
 
-.hezo .infor .row-infor span {
+.body .infor .row-infor span {
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 1.67;
     color: #5F5B53;
-}
+} */
 
 
 /* =================course=================== */
