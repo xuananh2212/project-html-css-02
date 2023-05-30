@@ -64,8 +64,26 @@ a {
   font-size: 3.8rem;
   line-height: 1.26;
 }
+.heading.lv3 {
+  font-size: 2.4rem;
+  line-height: 1.42;
+  color: #f7f7f7;
+}
 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
+.line-clamp.line2 {
+  --line-clamp: 2;
+}
+
+.word-break {
+  word-break: break-all;
+}
 
 /* ====================Header================== */
 
@@ -378,153 +396,64 @@ header {
   background-color: var(--primary-color);
 }
 
-/* =================course=================== */
-
-/* .courses {
-  padding: 200px 0;
-}
-
-.courses .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.courses .row .sub-title {
-  font-family: "Sen", sans-serif;
-  font-weight: 700;
-  font-size: 3.8rem;
-  line-height: 1.26;
-  letter-spacing: -0.02em;
-  color: #171100;
-}
-
-.courses .row .desc {
-  width: 458px;
-  margin-top: 16px;
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 1.67;
-  color: #5f5b53;
-}
-
-.courses .row-item img:first-child {
-  margin-right: 18px;
-}
-
-.courses .list-courses {
-  margin-top: 55px;
-  display: flex;
-  gap: 30px;
-}
-
-.courses .list-courses .items > img {
-  width: 370px;
-  height: 278px;
-  object-fit: cover;
-  border-radius: 12px 12px 0px 0px;
-}
-
-.courses .list-courses .infor {
-  padding: 16px 22px 22px 22px;
-}
-
-.courses .list-courses .row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.courses .list-courses .infor .sub-title {
-  font-weight: 600;
-  font-size: 1.8rem;
-  line-height: 1.67;
-  color: #171100;
-}
-
-.courses .list-courses .infor .desc {
-  font-weight: 400;
-  font-size: 1.4rem;
-  line-height: 1.86;
-  color: #5f5b53;
-}
-
-.courses .list-courses .infor .row-1 {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-}
-
-.courses .list-courses .infor strong {
-  margin-right: 141px;
-  font-weight: 600;
-  font-size: 1.8rem;
-  line-height: 1.67;
-  color: #171100;
-}
-
-.courses .list-courses .items:first-of-type .row-1 .btn {
-  background: #ffb900;
-}
-
-.courses .list-courses .items {
-  background: #ffffff;
-  box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
-  border-radius: 12px;
-} */
-
-/* =============testtimonial============= */
-
-.testimonial {
-  background: #2e2100;
+/* ==============feedback===================== */
+.feedback {
   padding: 96px 0;
+  background: #2e2100;
 }
 
-.testimonial .list {
+.feedback .feedback-list {
   display: flex;
-  gap: 241px;
+  overflow: hidden;
+}
+.feedback .feedback-item {
+  display: flex;
+  width: 100%;
+  flex-shrink: 0;
+  justify-content: space-between;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
 }
 
-.testimonial .item-1 .avatar {
-  display: inline-block;
+.feedback .infor .avatar {
   width: 72px;
   height: 72px;
   border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 18px;
 }
-
-.testimonial .item-1 b {
-  margin-top: 18px;
-  font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 1.42;
-  color: #f7f7f7;
-}
-
-.testimonial .item-1 .desc {
-  width: 159px;
-  margin-top: 4px;
+.feedback .infor .desc {
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.86;
   color: #bfbcb3;
 }
-
-.testimonial .row {
-  display: flex;
+.feedback .infor .dots {
   margin-top: 28px;
+  display: flex;
   gap: 6px;
 }
+.feedback .infor .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #634700;
+}
+.feedback .infor .dot.active {
+  background: #ffb900;
+}
 
-.testimonial .item-2 em {
-  margin-left: calc(565px - 535px);
-  display: inline-block;
-  width: 740px;
+.feedback .feedback-content {
+  width: 66%;
+}
+.feedback .feedback-content blockquote {
+  margin-left: 30px;
   font-style: italic;
   font-weight: 400;
   font-size: 2.6rem;
   line-height: 1.54;
   color: #ffffff;
 }
-
 /* =====================features========================= */
 
 .features {
