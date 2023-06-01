@@ -460,30 +460,33 @@ header {
   padding: 200px 0 100px;
 }
 
-.features .list {
+.features .body {
   display: flex;
-  gap: 130px;
-  align-items: center;
+  justify-content: space-between;
 }
 
-.features .item-1 {
+.features .images {
   display: flex;
   gap: 30px;
   height: 438px;
 }
 
-.features .item-1 img:first-child {
+.features .images img:first-child {
   align-self: flex-end;
 }
 
-.features .item-1 img {
+.features .images img {
   width: 270px;
   height: 405px;
   object-fit: cover;
   border-radius: 16px;
 }
+.features .infor {
+  width: 41%;
+  margin: auto 0;
+}
 
-.features .item-2 .title {
+.features .infor .title {
   font-family: "Sen", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -493,7 +496,7 @@ header {
   color: #171100;
 }
 
-.features .item-2 .desc {
+.features .infor .desc {
   margin-top: 16px;
   font-weight: 400;
   font-size: 1.6rem;
@@ -501,7 +504,7 @@ header {
   color: #5f5b53;
 }
 
-.features .item-2 .desc-1 {
+.features .infor .desc-1 {
   margin-top: 16px;
   font-weight: 400;
   font-size: 1.6rem;
@@ -509,7 +512,7 @@ header {
   color: #5f5b53;
 }
 
-.features .item-2 .btn {
+.features .infor .btn {
   margin-top: 32px;
   min-width: 137px;
   font-size: 1.6rem;
@@ -527,9 +530,11 @@ header {
   gap: 130px;
   align-items: center;
 }
+.cta .item-1 {
+  width: 49%;
+}
 
 .cta .item-1 .title {
-  width: 570px;
   font-family: "Sen", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -567,19 +572,10 @@ header {
   background: #fffcf4;
   padding: 96px 0;
 }
-
-.blog .title {
-  font-family: "Sen", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 3.8rem;
-  line-height: 1.26;
+.blog .blog-top {
   text-align: center;
-  letter-spacing: -0.02em;
-  color: #130606;
 }
-
-.blog .content > .desc {
+.blog .blog-top .desc {
   margin: 16px auto 0;
   width: 448px;
   font-weight: 400;
@@ -588,21 +584,33 @@ header {
   color: #696262;
   text-align: center;
 }
-
-.blog .list {
+.blog .blog-list {
+  display: flex;
+  overflow: hidden;
+}
+.blog .blog-list .blog-itemss {
+  flex-shrink: 0;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+}
+.blog .blog-items {
   margin-top: 55px;
   display: flex;
   gap: 30px;
 }
 
-.blog .list .items {
+.blog .item {
+  width: 33.3%;
   background: #ffffff;
-  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
   border-radius: 16px;
 }
+.blog .item:hover {
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+}
 
-.blog .list .items > img {
-  width: 370px;
+.blog .item img {
+  width: 100%;
   height: 250px;
   object-fit: cover;
   border-radius: 16px 16px 0px 0px;
@@ -612,6 +620,69 @@ header {
   padding: 20px 20px 28px;
 }
 
+.blog .infor .date {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 12px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #5f5b53;
+}
+.blog .infor .date::before {
+  content: "";
+  display: inline-block;
+  margin-right: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffb900;
+}
+.blog .infor .date::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: -24px;
+  content: "";
+  height: 1px;
+  background: #e2dfda;
+  border-radius: 0.5px;
+}
+.blog .infor .title a {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #171100;
+}
+.blog .infor .cta-btn {
+  margin-top: 12px;
+  border: none;
+}
+.blog .infor .cta-btn:hover {
+  background-color: var(--primary-color);
+}
+
+.blog .dots {
+  margin-top: 38px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+.blog .dots .dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5f5b53;
+}
+.blog .dots .dot.active {
+  background: var(--primary-color);
+}
+
+/* 
 .blog .infor p {
   display: inline-block;
   margin-left: 4px;
@@ -652,21 +723,18 @@ header {
   display: flex;
   gap: 6px;
   justify-content: center;
-}
+} */
 
 /* =================footer=========== */
 
 .footer {
-  padding: 96px 135px 28px;
+  padding: 96px 0 28px;
   background: #2e2100;
 }
 
 .footer .list {
   display: flex;
-}
-
-.footer .item-social {
-  margin-right: 145px;
+  justify-content: space-between;
 }
 
 .footer .item-social .desc {
@@ -728,10 +796,6 @@ header {
   color: #bfbcb2;
 }
 
-.footer .item-2 {
-  margin-right: 130px;
-}
-
 .footer .item-2 a:last-child {
   width: 83px;
 }
@@ -739,11 +803,6 @@ header {
 .footer .item-3 a:nth-of-type(2) {
   width: 137px;
 }
-
-.footer .item-3 {
-  margin-right: 137px;
-}
-
 .footer .item:last-child .desc {
   width: 231px;
 }
